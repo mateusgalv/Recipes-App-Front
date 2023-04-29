@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-interface IApiResponse {
+// interface IApiResponse {
 
-}
+// }
 
 export const useFetch = (endpoint: string): any => {
-  const [data, setData] = useState<IApiResponse | null>(null);
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     const fetchData = async () => {

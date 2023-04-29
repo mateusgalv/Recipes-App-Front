@@ -5,7 +5,7 @@ export default function NavigationBar(): JSX.Element {
     <div>
       <ul>
         <li><Link to='/meals'>Meals</Link></li>
-        <li>Drinks</li>
+        <li><Link to='/drinks'>Drinks</Link></li>
         <li>Favorites</li>
         <li>Random Meal</li>
         <li>Random Drinks</li>

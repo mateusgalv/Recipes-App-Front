@@ -3,13 +3,13 @@ import { useFetch } from '../hooks/useFetch'
 import { LoadingContext } from '../context/LoadingContext';
 
 interface ICategory {
-  idCategory: string,
+  idCategory?: string,
   strCategory: string,
-  strCategoryThumb: string,
-  strCategoryDescription: string,
+  strCategoryThumb?: string,
+  strCategoryDescription?: string,
 }
 
-export default function Meals(): JSX.Element {
+export default function Drinks(): JSX.Element {
   const [isReady, setIsReady] = useState<boolean>(false);
   const [categories, setCategories] = useState<ICategory[]>([]);
   
@@ -17,7 +17,7 @@ export default function Meals(): JSX.Element {
     console.log('useEffect')
     const fetchCategories = async () => {
       setIsReady(false);
-      const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
+      const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
       const { categories } = await response.json();
       setCategories(categories);
       setIsReady(true);
