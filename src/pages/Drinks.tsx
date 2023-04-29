@@ -14,12 +14,11 @@ export default function Drinks(): JSX.Element {
   const [categories, setCategories] = useState<ICategory[]>([]);
   
   useEffect(() => {
-    console.log('useEffect')
     const fetchCategories = async () => {
       setIsReady(false);
       const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
-      const { categories } = await response.json();
-      setCategories(categories);
+      const { drinks } = await response.json();
+      setCategories(drinks);
       setIsReady(true);
     }
 

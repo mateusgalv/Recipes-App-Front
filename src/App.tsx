@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import Meals from "./pages/Meals"
+import Drinks from "./pages/Drinks"
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='meals' element={ <Meals /> } />
-        {/* <Route exact path='drinks' element={ <Drinks /> } */}
+        <Route path='drinks' element={ <Drinks /> } />
       </Routes>
     </div >
   )
