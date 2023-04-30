@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  display: flex;
+}
+
+.carousel {
+  display: flex;
+  width: 700px;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  border: 1px solid blue;
+}
+
+.items-container {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 250px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+.recipe-img {
+  height: 50px;
+  width: 50px;
+}
