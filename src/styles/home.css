@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@700&display=swap');/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #f4ecdf;
+  /* min-height: define; */
+  height: calc(100vh - 50px);
+  background-image: url(../assets/brooke-lark-08bOYnH_r_E-unsplash.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 350px;
+}
+
+h2 {
+  margin-top: 250px;
+  font-size: 2.5em;
+  font-family: 'Carlito', sans-serif;
+}
+
+.orange {
+  color: #FD9F26;
+}
+
+.btn-container {
+  margin-right: 170px;
+}
+
+div button {
+  margin: 20px 5px;
+  width: 120px;
+  background-color: #FD9F26;
+}
+
+div button:hover {
+  border: 1px solid black;
+}

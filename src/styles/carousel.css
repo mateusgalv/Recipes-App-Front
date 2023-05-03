@@ -10,7 +10,7 @@
 
 .carousel {
   display: flex;
-  width: 700px;
+  width: 95vw;
   flex-wrap: nowrap;
   overflow-x: hidden;
   border: 1px solid blue;

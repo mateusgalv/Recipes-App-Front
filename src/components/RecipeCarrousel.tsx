@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import _React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 import '../styles/carousel.css';
 
@@ -15,8 +15,11 @@ interface ICategory {
 export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [recipes, setRecipes] = useState<IMeal[]>([]);
-  const [width, setWidth] = useState(0)
-  const carousel = useRef(null);
+  const carousel = useRef<any>(null);
+
+  const getWidth = (): number => {
+    return -(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  }
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -28,23 +31,24 @@ export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Elem
     };
 
     fetchRecipes();
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
   }, [])
 
   return (
     <div className='carousel-container'>
-      <div ref={ carousel } className='carousel'>
-        <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className='items-container'>
+      <div ref={carousel} className='carousel'>
+        <motion.div
+          drag='x'
+          dragConstraints={{ right: 0, left: getWidth() }}
+          initial={{ x: 0 }}
+          className='items-container'
+        >
           {
-            !isLoading ? (
-              recipes.map((recipe) => (
-                <div className='item'>
-                  <img src={recipe.strMealThumb} className='recipe-img' />
-                  <p>{recipe.strMeal}</p>
-                </div>
-              ))
-            ) : (<h3>Loading</h3>)
+            recipes.map((recipe) => (
+              <div className='item'>
+                <img src={recipe.strMealThumb} className='recipe-img' />
+                <p>{recipe.strMeal}</p>
+              </div>
+            ))
           }
         </motion.div>
       </div>

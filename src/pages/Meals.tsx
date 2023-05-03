@@ -32,7 +32,7 @@ export default function Meals(): JSX.Element {
         isReady ? (
           categories.map((category: ICategory): JSX.Element => (
             <div>
-              <p>{category.strCategory}</p>
+              <h2>{category.strCategory}</h2>
               {
                 <RecipeCarrousel
                   recipeCategory={category.strCategory}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../styles/navBar.css';
 
 export default function NavigationBar(): JSX.Element {
   return (
@@ -7,8 +8,6 @@ export default function NavigationBar(): JSX.Element {
         <li><Link to='/meals'>Meals</Link></li>
         <li><Link to='/drinks'>Drinks</Link></li>
         <li>Favorites</li>
-        <li>Random Meal</li>
-        <li>Random Drinks</li>
       </ul>
     </div>
   )

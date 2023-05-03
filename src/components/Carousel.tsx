@@ -1,4 +1,4 @@
-import React from 'react'
+import _React from 'react'
 import { motion } from 'framer-motion'
 
 export default function Carousel({ recipe }: any): JSX.Element {
