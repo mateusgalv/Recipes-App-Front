@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/signIn.css';
 
 export default function SignIn() {
@@ -10,9 +9,8 @@ export default function SignIn() {
         </div>
         <div>
           <form className='form'>
-            <input />
-            <input />
-            <input />
+            <input placeholder='Email'/>
+            <input placeholder='Password'/>
           </form>
         </div>
         <div>

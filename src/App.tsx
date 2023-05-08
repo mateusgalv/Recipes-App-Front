@@ -1,5 +1,5 @@
-import _React from 'react'
-import { Route, Routes } from "react-router-dom"
+import _React, { useEffect, useState } from 'react'
+import { Route, Routes, useLocation } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import Meals from "./pages/Meals"
@@ -9,7 +9,8 @@ import SignIn from './pages/SignIn'
 
 function App() {
   return (
-    <div>
+    <div className='app-container'>
+    <div className='background'></div>
       <Header />
       <Routes>
         <Route path='/' element={ <Home /> } />
@@ -18,8 +19,9 @@ function App() {
         <Route path='signin' element={ <SignIn /> } />
         <Route path='login' element={ <Home /> } />
         <Route path='/favorites' element={ <Home /> } />
+        // My recipes
       </Routes>
-    </div >
+    </div>
   )
 }
 

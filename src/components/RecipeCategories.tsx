@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchCategories from '../utils/fetchCategories';
+import '../styles/recipes.css';
 
 interface ICategory {
   idCategory: string,
@@ -10,14 +11,12 @@ interface ICategory {
 
 export default function RecipeCategories(): JSX.Element {
   const [categories, setCategories] = useState<ICategory[]>([]);
-  // const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getCategories = async () => {
       const categories = await fetchCategories();
       setCategories(categories);
-      // setIsLoading(false);
-    }
+    };
 
     getCategories();
   }, [])

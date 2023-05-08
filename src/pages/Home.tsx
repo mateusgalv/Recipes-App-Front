@@ -6,10 +6,10 @@ export default function Home() {
     <div className='home-page-container'>
       <section className='home-section'>
         <div>
-          <h2>Cook your favorite <span className='orange'>Foods!</span></h2>
+          <h2>Cook your favorite <span className='orange'>Recipes!</span></h2>
         </div>
         <div>
-          Easy & clean recipes web-app.
+          Easy recipes web-app.
         </div>
       </section>
       <section className='home-section'>

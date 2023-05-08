@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Carlito:wght@700&display=swap');/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
+/* Width: 1920px */
+/* Heigth: 1080px */
+
 .home-page-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  background-color: #f4ecdf;
-  /* min-height: define; */
-  height: calc(100vh - 50px);
-  background-image: url(../assets/brooke-lark-08bOYnH_r_E-unsplash.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
+  align-items: flex-start;
+  width: 500px;
+  height: 150px;
+  margin-left: 50vw;
+  /* margin-left: calc(100vw - 500px - 350px); */
+  margin-top: 40vh;
 }
 
 .home-section {
   display: flex;
   flex-direction: column;
-  margin-right: 350px;
+  align-items: flex-start;
 }
 
-h2 {
-  margin-top: 250px;
+.home-section h2 {
   font-size: 2.5em;
   font-family: 'Carlito', sans-serif;
 }
@@ -30,15 +31,44 @@ h2 {
 }
 
 .btn-container {
-  margin-right: 170px;
+  margin-top: 15px;
 }
 
-div button {
-  margin: 20px 5px;
-  width: 120px;
+.btn-container button {
   background-color: #FD9F26;
+  width: 150px;
+  height: 3em;
+  margin-right: 15px;
 }
 
-div button:hover {
-  border: 1px solid black;
+.btn-container button:hover {
+  border: 0.5px solid black;
+  color: white;
+}
+
+/* @media (max-width: 1440px) {
+  .home-page-container {
+    margin-left: calc(100vw - 500px - 250px);
+  }
+} */
+
+@media (max-width: 1000px) {
+  .home-page-container {
+    align-items: center;
+    width: 100vw;
+    height: 120px;
+    margin-left: 0;
+    margin-top: 40vh;
+  }
+  .home-section {
+    width: 100%;
+    margin-left: 50%;
+  }
+  .home-section h2 {
+    font-size: 1.5em;
+    font-family: 'Carlito', sans-serif;
+  }
+  .btn-container button {
+    width: 100px;
+  }
 }

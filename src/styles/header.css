@@ -9,8 +9,8 @@
   /* justify-content: ; */
   margin-top: 0;
   height: 50px;
-  background: rgb(246,250,251);
-  background: linear-gradient(90deg, rgba(246,250,251,1) 0%, rgba(242,247,250,1) 54%, rgba(235,243,246,1) 59%, rgba(241,246,249,1) 70%, rgba(246,250,251,1) 75%, rgba(223,234,238,1) 100%);
+  /* background: rgb(246,250,251); */
+  /* background: linear-gradient(90deg, rgba(246,250,251,1) 0%, rgba(242,247,250,1) 54%, rgba(235,243,246,1) 59%, rgba(241,246,249,1) 70%, rgba(246,250,251,1) 75%, rgba(223,234,238,1) 100%); */
   /* border-bottom: 1px solid #FD9F26; */
   box-shadow: 0 0 3px 0;
 }

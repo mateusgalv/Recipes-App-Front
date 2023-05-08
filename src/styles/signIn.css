@@ -3,23 +3,24 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  box-shadow: 5px;
   height: calc(100vh - 50px);
-  background-image: url(../assets/brooke-lark-08bOYnH_r_E-unsplash.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
 }
 
 .sign-in-content {
   border: 1px solid black;
+  border-radius: 5%;
   margin-top: 250px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form {
+  padding: 50px;
   display: flex;
   flex-direction: column;
   border: 1px;
-  /* margin-top: 250px; */
 }
 
 .form input {

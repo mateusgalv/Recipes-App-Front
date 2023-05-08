@@ -1,7 +1,7 @@
-import { ReactNode, useContext, useEffect, useState } from 'react'
-import { useFetch } from '../hooks/useFetch'
-import { LoadingContext } from '../context/LoadingContext';
+import { useEffect, useState } from 'react';
 import RecipeCarrousel from '../components/RecipeCarrousel';
+import '../styles/recipes.css';
+import { motion } from 'framer-motion';
 
 interface ICategory {
   idCategory: string,
@@ -27,21 +27,27 @@ export default function Meals(): JSX.Element {
   }, [])
 
   return (
-    <div>
+    <motion.div className='recipes-container'
+      // drag='y'
+    >
+      <div className='category-container'>
       {
         isReady ? (
           categories.map((category: ICategory): JSX.Element => (
-            <div>
+            <div className='category-item'>
               <h2>{category.strCategory}</h2>
+              <hr></hr>
               {
                 <RecipeCarrousel
-                  recipeCategory={category.strCategory}
+                recipeCategory={category.strCategory}
                 />
               }
+            <hr></hr>
             </div>
           ))
-        ) : (<h3>Loading...</h3>)
-      }
-    </div>
+          ) : (<h3>Loading...</h3>)
+        }
+        </div>
+    </motion.div>
   )
 }

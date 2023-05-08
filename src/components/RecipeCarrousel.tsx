@@ -13,7 +13,6 @@ interface ICategory {
 }
 
 export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Element {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [recipes, setRecipes] = useState<IMeal[]>([]);
   const carousel = useRef<any>(null);
 
@@ -23,11 +22,9 @@ export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Elem
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      setIsLoading(true);
       const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${recipeCategory}`)
       const { meals } = await response.json();
       setRecipes(meals);
-      setIsLoading(false);
     };
 
     fetchRecipes();
@@ -38,6 +35,7 @@ export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Elem
       <div ref={carousel} className='carousel'>
         <motion.div
           drag='x'
+          whileTap={{ cursor: 'grabbing'}}
           dragConstraints={{ right: 0, left: getWidth() }}
           initial={{ x: 0 }}
           className='items-container'
@@ -46,7 +44,7 @@ export default function RecipeCarrousel({ recipeCategory }: ICategory): JSX.Elem
             recipes.map((recipe) => (
               <div className='item'>
                 <img src={recipe.strMealThumb} className='recipe-img' />
-                <p>{recipe.strMeal}</p>
+                {/* <p>{recipe.strMeal}</p> */}
               </div>
             ))
           }
