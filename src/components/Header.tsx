@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 export default function Header(): JSX.Element {
   return (
     <header className='header'>
-      <div className='main-title'>
-        <Link to='/'>Recipes App</Link>
+      <div className='header-element'>
+        <Link to='/'>
+          <p className='nav-bar-text'>Recipes App</p>
+        </Link>
       </div>
-      <div className='nav-bar'>
+      <div className='header-element nav-bar'>
         <NavigationBar />
       </div>
-      <div className='search-bar'>
-        Search
+      <div className='header-element'>
+        <p className='nav-bar-text'>Search</p>
       </div>
     </header>
   )

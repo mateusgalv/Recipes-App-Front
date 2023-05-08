@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carlito:wght@700&display=swap');/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
+/* Development screen properties */
 /* Width: 1920px */
 /* Heigth: 1080px */
 
@@ -11,7 +12,6 @@
   width: 500px;
   height: 150px;
   margin-left: 50vw;
-  /* margin-left: calc(100vw - 500px - 350px); */
   margin-top: 40vh;
 }
 
@@ -46,12 +46,6 @@
   color: white;
 }
 
-/* @media (max-width: 1440px) {
-  .home-page-container {
-    margin-left: calc(100vw - 500px - 250px);
-  }
-} */
-
 @media (max-width: 1000px) {
   .home-page-container {
     align-items: center;
@@ -61,8 +55,7 @@
     margin-top: 40vh;
   }
   .home-section {
-    width: 100%;
-    margin-left: 50%;
+    margin-left: 50%vh;
   }
   .home-section h2 {
     font-size: 1.5em;
