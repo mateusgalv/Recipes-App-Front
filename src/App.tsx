@@ -1,11 +1,10 @@
-import _React, { useEffect, useState } from 'react'
-import { Route, Routes, useLocation } from "react-router-dom"
-import Header from "./components/Header"
-import Home from "./pages/Home"
-import Meals from "./pages/Meals"
-import Drinks from "./pages/Drinks"
-import './styles/app.css'
-import SignIn from './pages/SignIn'
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Meals from './pages/Meals';
+import Drinks from './pages/Drinks';
+import './styles/app.css';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (

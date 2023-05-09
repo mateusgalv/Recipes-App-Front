@@ -1,30 +1,50 @@
 .sign-in-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid black;
+  align-items: flex-start;
+  width: 100%;
   height: calc(100vh - 50px);
 }
 
 .sign-in-content {
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-top: 250px;
-  margin-left: 50px;
+  border: 0.5px solid #FD9F26;
+  width: 350px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30vh;
+  margin-left: 50vw;
+  padding: 30px;
+}
+
+.sign-in-content section {
+  margin-bottom: 15px;
+}
+
+.sign-in-content section:nth-child(4) {
+  margin-bottom: 0;
 }
 
 .form {
-  padding: 50px;
   display: flex;
   flex-direction: column;
-  border: 1px;
+  padding: 5px;
 }
 
 .form input {
-  margin: 5px;
-  height: 1.8em;
-  padding-left: 5px;
+  height: 2.5em;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.sign-in-btn {
+  background-color: #fcb155;
+  width: 150px;
+}
+
+.sign-in-error {
+  color: red;
+  font-size: 0.8em;
+  flex-wrap: wrap;
+  width: 150px;
 }

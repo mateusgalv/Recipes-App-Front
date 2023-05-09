@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+.recipes-container {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.category-item {
+  width: 95%;
+  margin: 10px 10px;
+}
+
+.category-item h2 {
+  font-size: 2em;
+}
+
+.category-item hr {
+  border: 1px solid #FD9F26;
+  border-radius: 10px;
+}
