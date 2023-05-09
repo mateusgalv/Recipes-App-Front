@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-}
-
 .recipes-container {
   width: 100vw;
   height: calc(100vh - 50px);
@@ -12,8 +8,6 @@
 
 .category-container {
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   width: 100%;
 }
@@ -24,7 +18,8 @@
 }
 
 .category-item h2 {
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-left: 5px;
 }
 
 .category-item hr {

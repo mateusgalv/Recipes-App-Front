@@ -11,10 +11,10 @@
 
 .carousel {
   display: flex;
-  width: 95vw;
+  width: 100vw;
   flex-wrap: nowrap;
   overflow-x: hidden;
-
+  position: relative;
 }
 
 .items-container {
@@ -28,33 +28,49 @@
   height: 250px;
   width: 150px;
   margin: 5px;
-  border-radius: 15px;
-  border: 2px solid #FD9F26;
-  /* z-index: 1; */
+  border-radius: 10px;
+  /* border: 2px solid #FD9F26; */
+  position: relative;
+  z-index: 1;
 }
 
-.item p {
-  color: #FD9F26;
+.img-container {
+  height: 90%;
+  width: inherit;
+  position: absolute;
+  opacity: 0.9;
+  background-color: #FD9F26;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .recipe-img {
   object-fit: cover;
-  height: inherit;
+  height: 190px;
   width: inherit;
   border-radius: inherit;
   pointer-events: none;
-  /* z-index: 2; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid #FD9F26;
+}
+
+.name-container {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 0.8em;
+  background-color: #FD9F26;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .item:hover {
-  border: 4px solid #FD9F26;
+  /* border: 4px solid #FD9F26; */
 }
-
-/*.roll-right {
-  position: absolute;
-  height: 260px;
-  border: 1px black solid;
-  width: 50px;
-  left: -1000px;
-  z-index: 1;
-} */
